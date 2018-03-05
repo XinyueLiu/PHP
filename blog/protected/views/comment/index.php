@@ -1,14 +1,6 @@
 <?php
-/* @var $this CommentController */
-/* @var $dataProvider CActiveDataProvider */
-
 $this->breadcrumbs=array(
 	'Comments',
-);
-
-$this->menu=array(
-	array('label'=>'Create Comment', 'url'=>array('create')),
-	array('label'=>'Manage Comment', 'url'=>array('admin')),
 );
 ?>
 
