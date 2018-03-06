@@ -35,7 +35,7 @@ class CommentController extends Controller
                 'users'=>array('@'),
             ),
             array('deny',  // deny all users
-                'user'=>array('*'),
+                'users'=>array('*'),
             ),
 		);
 	}

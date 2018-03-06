@@ -890,3 +890,206 @@ Stack trace:
 REQUEST_URI=/php/blog/index.php?r=comment/index
 HTTP_REFERER=http://www.localhost:8888/php/blog/index.php?r=post/view&id=2&title=A+Test+Post
 ---
+2018/03/06 04:21:12 [error] [exception.CException] CException: Property "CAccessRule.user" is not defined. in /Applications/MAMP/htdocs/yii/blog/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/auth/CAccessControlFilter.php(115): CComponent->__set('user', Array)
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1147): CAccessControlFilter->setRules(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('index')
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/index')
+#8 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/index
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php
+---
+2018/03/06 04:22:23 [error] [exception.CException] CException: Property "CAccessRule.user" is not defined. in /Applications/MAMP/htdocs/yii/blog/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/auth/CAccessControlFilter.php(115): CComponent->__set('user', Array)
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1147): CAccessControlFilter->setRules(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('index')
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/index')
+#8 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/index
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=post/view&id=1&title=Welcome%21
+---
+2018/03/06 04:54:02 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=1
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:00:03 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=3
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:18:46 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:21:05 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:21:07 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:21:08 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:21:08 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:21:09 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
+2018/03/06 05:21:32 [error] [exception.CHttpException.400] CHttpException: Invaild request. Please do not repeat this request again. in /Applications/MAMP/htdocs/yii/blog/protected/controllers/CommentController.php:84
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): CommentController->actionDelete()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('delete')
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#11 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
+---
