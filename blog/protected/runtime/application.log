@@ -1093,3 +1093,63 @@ Stack trace:
 REQUEST_URI=/yii/blog/index.php?r=comment/delete&id=2
 HTTP_REFERER=http://localhost:8888/yii/blog/index.php?r=comment/index
 ---
+2018/03/09 00:29:23 [error] [system.db.CDbCommand] Error in preparing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1520555363
+in /Applications/MAMP/htdocs/yii/blog/index.php (13)
+2018/03/09 00:29:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: YiiCache. The SQL statement executed was: DELETE FROM YiiCache WHERE expire>0 AND expire<1520555363.
+in /Applications/MAMP/htdocs/yii/blog/index.php (13)
+2018/03/09 00:29:23 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [14] unable to open database file in /Applications/MAMP/htdocs/yii/blog/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/base/CModule.php(394): CDbConnection->init()
+#3 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /Applications/MAMP/htdocs/yii/blog/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /Applications/MAMP/htdocs/yii/blog/framework/db/ar/CActiveRecord.php(1436): CActiveRecord->getDbConnection()
+#6 /Applications/MAMP/htdocs/yii/blog/framework/db/ar/CActiveRecord.php(1492): CActiveRecord->getTableAlias(true)
+#7 /Applications/MAMP/htdocs/yii/blog/protected/controllers/PostController.php(190): CActiveRecord->findByPk('1', '')
+#8 /Applications/MAMP/htdocs/yii/blog/protected/controllers/PostController.php(53): PostController->loadModel()
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): PostController->actionView()
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#17 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/blog/index.php/post/1/Welcome%21
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php/post/admin
+---
+2018/03/09 00:30:31 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [14] unable to open database file in /Applications/MAMP/htdocs/yii/blog/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/blog/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /Applications/MAMP/htdocs/yii/blog/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /Applications/MAMP/htdocs/yii/blog/framework/base/CModule.php(394): CDbConnection->init()
+#3 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /Applications/MAMP/htdocs/yii/blog/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /Applications/MAMP/htdocs/yii/blog/framework/db/ar/CActiveRecord.php(1436): CActiveRecord->getDbConnection()
+#6 /Applications/MAMP/htdocs/yii/blog/framework/db/ar/CActiveRecord.php(1492): CActiveRecord->getTableAlias(true)
+#7 /Applications/MAMP/htdocs/yii/blog/protected/controllers/PostController.php(190): CActiveRecord->findByPk('1', '')
+#8 /Applications/MAMP/htdocs/yii/blog/protected/controllers/PostController.php(53): PostController->loadModel()
+#9 /Applications/MAMP/htdocs/yii/blog/framework/web/actions/CInlineAction.php(49): PostController->actionView()
+#10 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/MAMP/htdocs/yii/blog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(291): CFilterChain->run()
+#17 /Applications/MAMP/htdocs/yii/blog/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Applications/MAMP/htdocs/yii/blog/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /Applications/MAMP/htdocs/yii/blog/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Applications/MAMP/htdocs/yii/blog/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/blog/index.php/post/1/Welcome%21
+HTTP_REFERER=http://localhost:8888/yii/blog/index.php/post/admin
+---
